@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+  /* font-family: 'Urbanist', sans-serif; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
+  list-style: none;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  margin-top: 10rem;
 }
 
-.App-link {
-  color: #61dafb;
+main h2 {
+  font-size: 3rem;
+  font-family: 'Lexend Deca', sans-serif;
+  margin-bottom: 4.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main h2 .icons {
+  color: #68b984;
+}
+
+nav {
+  width: 55rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+nav a {
+  font-size: 2rem;
+  font-family: 'Lexend Deca', sans-serif;
+  color: #534f4bf3;
+  border-bottom: 0.3rem solid transparent;
+}
+
+nav a:hover {
+  border-color: #3a3845;
+}
+
+nav a.active {
+  color: #000;
+  border-color: #68b984;
+}
+
+/*===================*/
+/*Form  styling */
+/*====================*/
+
+form input {
+  border: 0.1rem solid #ccc;
+  border-radius: 0.3rem;
+  width: 45rem;
+  margin: 4rem 0;
+  padding: 0.6rem 1rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.06rem;
+  font-weight: bold;
+}
+
+form button {
+  padding: 0.8rem 2.8rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 2.4rem;
+  background-color: #68b984;
+  color: #fff;
+}
+
+label {
+  font-size: 1.5rem;
+  letter-spacing: 0.06rem;
+  color: #3a3845;
+  font-weight: bold;
+}
+
+/*===================*/
+/* todo task list */
+/*====================*/
+
+.main-task li {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width: 50rem;
+  min-height: 6rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+.main-task li:first-child {
+  border-top: 0.1rem solid #ccc;
+}
+
+.main-task li:hover {
+  background-color: #fef2f2;
+}
+
+.main-task li input[type='checkbox']:checked + label {
+  text-decoration: line-through;
+  color: #d14d72;
+}
+
+.main-task li button {
+  padding: 0.6rem 1rem;
+  width: 7rem;
+  background-color: #d14d72;
+  color: #fff9f9;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  justify-self: center;
+  letter-spacing: 0.1rem;
+}
+
+#deleteAll {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  width: 14rem;
+  background-color: #fff;
+  color: black;
+  border: transparent;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  display: inline-block;
+  cursor: pointer;
+  justify-self: center;
+  letter-spacing: 0.1rem;
 }
